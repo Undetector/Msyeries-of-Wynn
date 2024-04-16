@@ -1,9 +1,7 @@
-#First set the scene to the player, explain the surroundings.
-
-
-#Allow the player to choose which direction they want to go, then explain to the player their nrw surroundings.
-
-#Give the player coices that may or may not hurt them.
-#Show the player the objects that they can pick up, the weapons, potions and runes along the way.
-
-#Explain the characters that you can talk to, what they look like and how you cna interact with them.
+#Initialize everything
+#First set the scene to the player
+#Print all of the options and explainations
+#Allow player input to change the 'location' of the player
+#Allow player input again to move elsewhere or search the area
+#Describe the objects around the player or the new surroundings
+#Describe the other characters in the game
