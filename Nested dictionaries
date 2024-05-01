@@ -1,0 +1,122 @@
+#RPG Nested Dictionaries
+#April 29th, 2024
+
+#This code will create properties for various parts of my RPG
+
+#Character
+player = {
+    'warrior' : {
+        'health' : 100,
+        'defense' : 10,
+        'dexterity' : 20,
+        'name' : 'stone',
+        'strengths' : 'brave, skilled and strong',
+        'weaknesses' : 'cautious and scared of water',
+        },
+    'mage' : {
+        'health' : 50,
+        'defense' : 5,
+        'dexterity' : 80,
+        'name' : 'skip',
+        'strengths' : 'quick, sharp and accurate',
+        'weaknesses' : 'distracted and frail',
+        }
+    }
+
+#Loactions
+locations = {
+    'river' : 'A seemingly endless river stretching out far past the horizon.',
+    'mountains' : 'A tall foreboding mountain that hides secrets within it.',
+    'abandoned village' : 'A village that seems well-maintained, despite being abandoned.',
+    'woods' : 'A forest which has a magical aura around it.'
+    }
+
+#Inventory items
+inventory = {
+    'weapons' : {
+        'sword' : {
+            'description' :
+            'A boradswrord that seems to always be sharp.',
+            'damage' : '20-40',
+            'range' : 10
+            },
+        'gun' : {
+            'description' :
+            'A basic revolver that automatically reloads',
+            'damage' : '50-80',
+            'range' : 'Depending on accuracy'
+            },
+        'grimoire' : {
+            'description' :
+            'A spellbook whose words become clearer as you learn',
+            'damage' : '80-90',
+            'range' : 'Depending on mana'
+            },
+        'flail' : {
+            'description' :
+            'A medival weapon that hits like a rock but is light as a feather to the user',
+            'damage' : '30-50',
+            'range' : 30
+            },
+        'laser' : {
+            'description' :
+            'A literal pice of laser, I dont know how one would wield it however..',
+            'damage' : 50,
+            'range' : "infinite, just don't miss.."
+            }
+        },
+    'potions' : {
+        'foreshadowing' :
+        'allows you to temporarily see a few seconds into the future',
+        'void' : 'allows you to create a storage void',
+        'unbreaking' : 'grants invincibility for 5 seconds',
+        'healing' : 'heals when applied'
+        },
+    'runes' : {
+        'reflection' : 'reflects some damage dealt',
+        'defense' : 'strengthens and reinforces',
+        'invisibility' : "hides what it's attatched to",
+        'substitution' : 'switches with an object when user is in fatal danger'
+        }
+    }
+
+#Printing each statement
+#Printing each character and their traits
+for char, desc in player.items():
+    char = char.title()
+    name = desc['name'].title()
+    print(f"{char}:")
+    print(f"\tThe {char}'s name is {name}.")
+    print(f"\t{name} has {desc['health']} health.")
+    print(f"\t{name} has {desc['defense']} defense.")
+    print(f"\t{name} has {desc['dexterity']} dexterity points.")    
+    print(f"\t{name}'s strengths are being {desc['strengths']}.")
+    print(f"\tBut {name}'s weaknesses are being {desc['weaknesses']}.")
+
+print('\n')
+#Printing the locations and descriptions
+for location, desc in locations.items(): 
+    print(f"The {location.title()}:")
+    print(f"\t{desc}\n")
+
+print('')
+#Printing the weapons and their traits
+for weapon, traits in inventory['weapons'].items():
+    print(f"For the {weapon}:")
+    description = traits['description']
+    damage = traits['damage']
+    ranged = traits['range']
+    print(f"\t The {weapon} is {description}.")
+    print(f"\t The {weapon} deals {damage} damage.")
+    print(f"\t The {weapon}'s range is {ranged}.\n")
+
+#Printing the potions in the inventory
+for potion, desc in inventory['potions'].items():
+    print(f"The {potion} potion:")
+    print(f'\t{desc.title()}.\n')
+
+#Printing the runes and what they do
+for rune, desc in inventory['runes'].items():
+    print(f"The {rune} rune:")
+    print(f'\t{desc}.\n')
+
